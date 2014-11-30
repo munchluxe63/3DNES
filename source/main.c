@@ -33,6 +33,7 @@ bool PAUSE_Emulation;
 bool ENABLE_Background;
 bool ENABLE_Sprite;
 bool inGame;
+bool VSYNC;
 
 int PAD1_ReadCount = 0;
 
@@ -46,7 +47,6 @@ void INIT_3DS() {
 	gfxInit();
 	hidInit(NULL);
 	gfxSet3D(false);
-	aptSetupEventHandler();
 	init_ppu();
 
 	ROM_Cache 			= NULL;
